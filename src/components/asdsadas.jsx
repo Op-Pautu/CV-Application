@@ -4,11 +4,11 @@ export default function Education() {
   const [editMode, setEditMode] = React.useState(false);
   const [education, setEducation] = React.useState([
     {
-      school: "Harvard University",
-      degree: "Master of Science in Computer Science",
-      location: "Cambridge, MA",
-      startDate: "2020-02-01",
-      endDate: "2022-03-01",
+      school: "",
+      degree: "",
+      location: "",
+      startDate: "",
+      endDate: "",
     },
   ]);
 

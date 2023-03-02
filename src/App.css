@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -9,7 +11,7 @@ body {
 
 .App {
   margin: 0 auto;
-  width: 80%;
+  width: 700px;
 }
 
 
@@ -67,6 +69,7 @@ form {
   align-items: center;
 }
 
+
 .edit-btn {
   text-align: end;
   padding-top: 45px;
@@ -75,9 +78,15 @@ form {
   margin-left: 80px;  
 }
 
-
+ .edu {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
 
 .exp {
   display: flex;
   justify-content: space-between;
+  padding: 20px 0;
 }
+

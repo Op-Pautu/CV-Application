@@ -3,7 +3,6 @@ import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Personal from "./components/Personal";
 import Projects from "./components/Projects";
-import Skills from "./components/Skills";
 
 function App() {
   return (
@@ -11,8 +10,7 @@ function App() {
       <Personal />
       <Education />
       <Experience />
-      <Projects />
-      <Skills />
+      {/* <Projects /> */}
     </div>
   );
 }
