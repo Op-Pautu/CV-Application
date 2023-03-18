@@ -44,7 +44,10 @@ export default function Experience() {
     ]);
     setEditMode(true);
   }
-
+  function cancelAdd() {
+    setExperience((prevExperience) => prevExperience.slice(0, -1));
+    setEditMode(false);
+  }
   return (
     <>
       {editMode ? (
@@ -83,8 +86,9 @@ export default function Experience() {
                 required
                 onChange={(e) => handleChange(e, index)}
               />
-              <input
-                type="text"
+              <textarea
+                rows="10"
+                cols="30"
                 name="contribution"
                 value={experience.contribution}
                 placeholder="contribution"
@@ -93,7 +97,12 @@ export default function Experience() {
               />
             </div>
           ))}
-          <button type="submit">Submit</button>
+          <div className="add-btn">
+            <button type="submit">Save</button>
+            <button type="button" onClick={cancelAdd}>
+              Cancel
+            </button>
+          </div>
         </form>
       ) : (
         <>

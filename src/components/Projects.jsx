@@ -1,11 +1,12 @@
 import React from "react";
 
 function Projects() {
-  const [editMode, setEditMode] = React.useState(true);
+  const [editMode, setEditMode] = React.useState(false);
   const [formData, setFormData] = React.useState([
     {
-      title: "",
-      description: "",
+      title: "Tic Tae Toe",
+      description:
+        "Made a simple game of tic tae toe using HTML, CSS, and JavaScript",
     },
   ]);
 
@@ -38,6 +39,10 @@ function Projects() {
     setEditMode(true);
   }
 
+  function cancelAdd() {
+    setFormData((prevData) => prevData.slice(0, -1));
+    setEditMode(false);
+  }
   return (
     <>
       {editMode ? (
@@ -62,7 +67,12 @@ function Projects() {
               />
             </div>
           ))}
-          <button type="submit">Submit</button>
+          <div className="add-btn">
+            <button type="submit">Save</button>
+            <button type="button" onClick={cancelAdd}>
+              Cancel
+            </button>
+          </div>
         </form>
       ) : (
         <>
@@ -70,16 +80,18 @@ function Projects() {
             <p className="heading">Projects</p>
             {formData.map((project, index) => (
               <p key={index} className="project-section">
-                <span className="project-title">{project.title}</span>:{" "}
+                <span className="project-title">{project.title}</span>:&nbsp;
                 {project.description}
               </p>
             ))}
           </div>
-          <div>
+          <div className="edit-btn">
             <button onClick={() => setEditMode((prev) => !prev)}>Edit</button>
           </div>
           <div>
-            <button onClick={addProject}>Add Project</button>
+            <button onClick={addProject} className="add-btn">
+              Add Project
+            </button>
           </div>
         </>
       )}

@@ -6,7 +6,7 @@
 
 body {
   border: 1px solid red;
-  
+
 }
 
 .App {
@@ -38,9 +38,11 @@ p.heading {
 svg {
   height: 18px;
   vertical-align: middle;
-  
+
 }
-.email, .phone {
+
+.email,
+.phone {
   display: flex;
   gap: 5px;
   align-items: center;
@@ -64,7 +66,7 @@ form {
 .personal {
   display: flex;
   justify-content: space-between;
- 
+
   padding: 20px 0;
   align-items: center;
 }
@@ -75,10 +77,10 @@ form {
   padding-top: 45px;
   width: 100%;
 
-  margin-left: 80px;  
+  margin-left: 80px;
 }
 
- .edu {
+.edu {
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
@@ -91,15 +93,21 @@ form {
 }
 
 .projects {
- 
+
   padding: 20px 0;
 }
 
 .project-title {
   font-size: 20px;
-  
+
   font-weight: bold;
 }
+
 .project-section {
   padding-top: 20px;
+}
+
+
+.add-btn {
+  margin-bottom: 30px;
 }

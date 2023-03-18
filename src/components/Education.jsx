@@ -43,7 +43,10 @@ export default function Education() {
     ]);
     setEditMode(true);
   }
-
+  function cancelAdd() {
+    setEducation((prevEducation) => prevEducation.slice(0, -1));
+    setEditMode(false);
+  }
   return (
     <>
       {editMode ? (
@@ -92,7 +95,12 @@ export default function Education() {
               />
             </div>
           ))}
-          <button type="submit">Submit</button>
+          <div>
+            <button type="submit">Save</button>
+            <button type="button" onClick={cancelAdd}>
+              Cancel
+            </button>
+          </div>
         </form>
       ) : (
         <>
